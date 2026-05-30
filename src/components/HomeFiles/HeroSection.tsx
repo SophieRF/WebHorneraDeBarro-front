@@ -41,7 +41,7 @@ export const HeroSection = () => {
 
                 {/* Atributos */}
                 <div className="flex flex-wrap justify-center mt-1">
-                    {["Barro rojo", "Óxidos naturales", "Bruñido a piedra", "Horno de leña", "Cera de abejas"].map((attr, i) => (
+                    {["Barro rojo", "Óxidos naturales", "Bruñido a piedra", "Horno de leña", "Cera de abejas"].map((attr) => (
                         <span
                             key={attr}
                             className="font-rubik font-light text-[0.58rem] tracking-[0.3em] uppercase text-[#5f432c] px-3 relative
