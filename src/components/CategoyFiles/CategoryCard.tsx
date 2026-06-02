@@ -17,7 +17,7 @@ export const CategoryCard: FC<CategoryCardProps> = ({ category, size }) => {
 
     return (
         <Link
-            to={`/category/${category._id}`}>
+            to={`/categories/${category._id}`}>
             <div className={`relative rounded-sm overflow-hidden ${sizeClasses[size]}`}>
                 <img
                     src={`http://localhost:5100/static/categories/${category.image}`}

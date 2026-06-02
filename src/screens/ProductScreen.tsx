@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { useProductStore } from "../store/useProductStore";
 import { useEffect, useState } from "react";
 import { useCartStore } from "../store/useCartStore";
@@ -30,70 +30,107 @@ export const ProductScreen = () => {
 
   return (
     <div className="md:flex justify-center mt-6 font-rubik">
-      <div className="hidden sm:flex sm:flex-row gap-3 sm:w-[410px] sm:h-[400px] mt-14 mx-auto md:mx-12">
+      <div className="flex flex-col gap-2 mt-6 sm:w-[410px] sm:h-[400px] mx-auto md:mx-12">
 
-        {/* Imagenes a la izquierda */}
-        {hasImages && hasMultipleImages && (
-          <div className="flex sm:flex-col gap-2 overflow-y-auto">
-            {product.images.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`w-20 h-28 rounded border overflow-hidden transition cursor-pointer
+        {/*Links */}
+        <div className="hidden sm:flex sm:gap-4">
+          <Link 
+          className="hover:underline"
+          to={"/"}>
+            <p>Inicio</p>
+          </Link>
+          <p> {">"} </p>
+          <Link 
+          className="hover:underline"
+          to={`/categories/${product.category._id}`}>
+            <p>{product.category.name}</p>
+          </Link>
+          <p> {">"} </p>
+          <p>{product.name}</p>
+        </div>
+
+        {/*IMAGENES */}
+        <div className="hidden sm:flex sm:flex-row gap-3 flex-1">
+
+          {/* Imagenes a la izquierda */}
+          {hasImages && hasMultipleImages && (
+            <div className="flex sm:flex-col gap-2 overflow-y-auto">
+              {product.images.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-20 h-28 rounded border overflow-hidden transition cursor-pointer
                   ${index === currentImageIndex
-                    ? "border-stone-200"
-                    : "border-transparent opacity-60 hover:opacity-100"
-                  }`}
-              >
-                <img
-                  src={image.url}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* Imagen principal */}
-        <div className="relative flex-1 md:w-80 overflow-hidden group">
-          {hasImages ? (
-            <>
-              {/* Imágenes */}
-              <div className="absolute inset-0">
-                {product.images.map((img, index) => (
+                      ? "border-stone-200"
+                      : "border-transparent opacity-60 hover:opacity-100"
+                    }`}
+                >
                   <img
-                    key={index}
-                    src={img.url}
-                    alt={`${product.name} - imagen ${index + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500
-                    ${index === currentImageIndex
-                        ? "opacity-100"
-                        : "opacity-0"
-                      }`}
+                    src={image.url}
+                    alt={product.name}
+                    className="w-full h-full object-cover"
                   />
-                ))}
-              </div>
-
-              {/* Contador */}
-              {hasMultipleImages && (
-                <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
-                  {currentImageIndex + 1} / {product.images.length}
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-400">Sin imagen</span>
+                </button>
+              ))}
             </div>
-          )
-          }
+          )}
+
+          {/* Imagen principal */}
+          <div className="relative flex-1 md:w-80 overflow-hidden group">
+            {hasImages ? (
+              <>
+                {/* Imágenes */}
+                <div className="absolute inset-0">
+                  {product.images.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img.url}
+                      alt={`${product.name} - imagen ${index + 1}`}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500
+                    ${index === currentImageIndex
+                          ? "opacity-100"
+                          : "opacity-0"
+                        }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Contador */}
+                {hasMultipleImages && (
+                  <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+                    {currentImageIndex + 1} / {product.images.length}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                <span className="text-gray-400">Sin imagen</span>
+              </div>
+            )
+            }
+          </div>
         </div>
       </div>
 
       {/* MOBILE LAYOUT */}
 
-      <div className="sm:hidden flex flex-col gap-3 w-[300px] h-[480px] mt-14 mx-auto">
+      <div className="sm:hidden flex flex-col gap-3 w-[380px] h-[480px] mt-14 mx-auto">
+        {/*Links */}
+        <div className="flex gap-4 ">
+          <Link 
+          className="hover:underline"
+          to={"/"}>
+            <p>Inicio</p>
+          </Link>
+          <p> {">"} </p>
+          <Link 
+          className="hover:underline"
+          to={`/categories/${product.category._id}`}>
+            <p>{product.category.name}</p>
+          </Link>
+          <p> {">"} </p>
+          <p>{product.name}</p>
+        </div>
         {/* Imagen principal */}
         <div className="relative flex-1 overflow-hidden group">
           {hasImages ? (
@@ -153,7 +190,7 @@ export const ProductScreen = () => {
       </div>
 
       {/*Descripción del producto */}
-      <div className="flex flex-col gap-2 lg:gap-3 lg:max-w-[36rem] mx-10 md:mr-10 md:ml-0 mt-8 md:mt-12 ">
+      <div className="flex flex-col gap-2 lg:gap-3 lg:max-w-[36rem] mx-12 md:mr-10 md:ml-0 mt-8 md:mt-12 ">
         <div className="text-3xl text-zinc-900 font-[380] lg:text-4xl">
           {product.name}
         </div>

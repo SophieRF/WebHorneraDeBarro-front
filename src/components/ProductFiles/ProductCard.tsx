@@ -52,9 +52,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart, ca
 
 
                         <div className="flex flex-row gap-1 items-center">
+
                             {/*No disponible */}
                             {!product.available &&
-                                (<p className="text-zinc-700 font-rubik italic text-sm">
+                                (<p className="text-zinc-700 font-rubik italic text-xs">
                                     No disponible
                                 </p>)}
 

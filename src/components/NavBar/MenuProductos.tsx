@@ -41,11 +41,11 @@ export const MenuProductos: React.FC<MenuProductosProps> = ({ visible, onClose, 
             <hr className="border-zinc-500 mt-3 mb-6" />
 
           </li>
-          <div className="grid grid-cols-2 md:gap-x-14 gap-y-4">
+          <div className="grid grid-cols-2 gap-x-12 md:gap-x-14 gap-y-4">
             {categories.map((category) => (
               <li key={category._id}>
                 <Link
-                  className="capitalize text-lg text-zinc-800 duration-500 hover:text-[#f0be4b]"
+                  className="capitalize text-lg text-zinc-800 duration-300 hover:text-[#99814a]"
                   to={`/categories/${category._id}`}
                   state={{ category }}
                   onClick={onClose}
