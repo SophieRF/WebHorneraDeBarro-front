@@ -20,7 +20,7 @@ export const CategoryCard: FC<CategoryCardProps> = ({ category, size }) => {
             to={`/categories/${category._id}`}>
             <div className={`relative rounded-sm overflow-hidden ${sizeClasses[size]}`}>
                 <img
-                    src={`http://localhost:5100/static/categories/${category.image}`}
+                    src={`${import.meta.env.VITE_API_URL}/static/categories/${category.image}`}
                     className="w-full h-full object-cover brightness-90 hover:brightness-100 hover:scale-110 transition-all duration-500"
                 />
 

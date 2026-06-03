@@ -39,7 +39,7 @@ export const useAuthStore = create(
                 const token = get().token;
                 if (!token) throw new Error("no hay token");
                 try {
-                    await axios.get("http://localhost:5100/admin/verificar", {
+                    await axios.get(`${import.meta.env.VITE_API_URL}/admin/verificar`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -56,7 +56,7 @@ export const useAuthStore = create(
 
                 try {
                     const response = await axios.put(
-                        "http://localhost:5100/admin/cambiar-usuario",
+                        `${import.meta.env.VITE_API_URL}/admin/cambiar-usuario`,
                         data,
                         {
                             headers: {

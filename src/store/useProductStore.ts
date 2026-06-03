@@ -19,7 +19,7 @@ export const useProductStore = create<ProductState>((set, get) => ({
 
     fetchProducts: async () => {
         try {
-            const res = await axios.get("http://localhost:5100/products");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/products`);
 
             set({ products: res.data });
         } catch (error) {
@@ -33,7 +33,7 @@ export const useProductStore = create<ProductState>((set, get) => ({
 
     getProductById: async (_id: string) => {
         try {
-            const res = await axios.get(`http://localhost:5100/products/${_id}`);
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/products/${_id}`);
             set({ product: res.data });
         } catch (error) {
             console.error("Error al traer el producto: ", error);

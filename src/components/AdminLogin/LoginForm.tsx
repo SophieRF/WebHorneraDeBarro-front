@@ -28,7 +28,7 @@ export const LoginForm = () => {
   const onSubmit: SubmitHandler<LoginFormData> = async (data) => {
     try {
       const res = await axios.post(
-        "http://localhost:5100/admin/login",
+        `${import.meta.env.VITE_API_URL}/admin/login`,
         data,
         {
           headers: {

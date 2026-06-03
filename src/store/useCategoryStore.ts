@@ -16,7 +16,7 @@ export const useCategoryStore = create<CategoryState>((set, get) => ({
 
     fetchCategories: async () => {
         try {
-            const res = await axios.get("http://localhost:5100/categories");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/categories`);
 
             set({ categories: res.data });
         } catch (error) {
