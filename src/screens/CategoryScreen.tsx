@@ -17,6 +17,10 @@ export const CategoryScreen = () => {
     fetchProducts();
   }, []);
 
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [categoryId]);
+
   if (categoryId === "all") {
     return (
       <div className="overflow-visible">
