@@ -30,13 +30,12 @@ export const Home = () => {
 
           <div className="h-px bg-gradient-to-r from-transparent via-[#c4956a] to-transparent" />
           <h3 className="font-cormorant italic font-normal text-[#20170c] leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl text-center py-10">
-            Antes de ser tuya, fue{" "}
-            <em className="italic font-[450] text-[#8b5a2b]">barro.</em>
+            Cada pieza nace del{" "}
+            <em className="italic font-[450] text-[#8b5a2b]">barro </em>
+            y se templa en el {" "}
+            <em className="italic font-[450] text-[#b1301f]">fuego</em>,
             <br />
-            Antes de ser{" "}
-            <em className="italic font-[450] text-[#8b5a2b]">barro,</em>
-            {" "}fue{" "}
-            <em className="italic font-[450] text-[#586849]">tierra.</em>
+            {" "} llevando calidez a tus espacios{" "}
           </h3>
           <div className="h-px bg-gradient-to-r from-transparent via-[#c4956a] to-transparent" />
 
