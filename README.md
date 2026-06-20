@@ -1,6 +1,7 @@
+> ⚠️ Este proyecto está actualmente en desarrollo activo. Algunas funcionalidades pueden estar incompletas o sujetas a cambios.
 # Hornera de Barro
 
-> Catálogo digital con carrito de compras vía WhatsApp para un emprendimiento de cerámica artesanal.
+Catálogo digital con carrito de compras vía WhatsApp para un emprendimiento de cerámica artesanal.
 
 ---
 
@@ -38,10 +39,12 @@ El vendedor dispone de un **panel de administración privado** desde donde gesti
 - Zustand: Manejo de estado global (carrito, auth)  
 - Axios: Comunicación con la API REST             
 
-### Backend
+### Backend 
  Node.js + Express: Servidor y API REST                    
  MongoDB + Mongoose: Base de datos y modelado de datos     
  JWT: Autenticación del administrador 
+ 
+ GH Link: https://github.com/SophieRF/WebHorneraDeBarro-back.git
 
 ### Servicios externos
  Cloudinary: Almacenamiento de imágenes   
@@ -49,6 +52,14 @@ El vendedor dispone de un **panel de administración privado** desde donde gesti
 
 ## Capturas
 ![Pantalla principal](src/assets/HomeHDB.png)
+![Pantalla principal - novedades](src/assets/HomeNovedades.png)
+![Pantalla principal - categorías](src/assets/HomeCategorías.png)
+![Pantalla de categoría](src/assets/CategoriaScreen.png)
+![Pantalla de producto](src/assets/ProductoScreen.png)
+![Pantalla de carrito](src/assets/CarritoPrevHDB.png)
+![Pantalla de pedido](src/assets/CarritoHDB.png)
+![Sobre mi](src/assets/SobreMi.png)
+
 ---
 
 *Desarrollado por Sofia Ferraro especialmente para Hornera de Barro — cerámica artesanal.*
