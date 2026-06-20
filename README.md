@@ -48,7 +48,7 @@ El vendedor dispone de un **panel de administración privado** desde donde gesti
  WhatsApp API (WhatsApp Click-to-Chat):  Envío del carrito al vendedor
 
 ## Capturas
- ![Pantalla principal](../assets/HomeHDB.png)
+![Pantalla principal](src/assets/HomeHDB.png)
 ---
 
 *Desarrollado por Sofia Ferraro especialmente para Hornera de Barro — cerámica artesanal.*
