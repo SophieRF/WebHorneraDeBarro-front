@@ -1,5 +1,5 @@
 > ⚠️ Este proyecto está actualmente en desarrollo activo. Algunas funcionalidades pueden estar incompletas o sujetas a cambios.
-# Hornera de Barro
+# Hornera de Barro - Emprendimiento de Cerámica artesanal
 
 Catálogo digital con carrito de compras vía WhatsApp para un emprendimiento de cerámica artesanal.
 
@@ -7,7 +7,7 @@ Catálogo digital con carrito de compras vía WhatsApp para un emprendimiento de
 
 ## Descripción
 
-**Hornera de Barro** es una aplicación web fullstack desarrollada de forma independiente con el stack MERN + TypeScript que funciona como **catálogo digital con carrito social**, donde los clientes pueden explorar productos, armar su pedido y enviarlo directamente al vendedor por WhatsApp.
+ Aplicación web fullstack desarrollada de forma independiente con el stack MERN + TypeScript que funciona como **catálogo digital con carrito social**, donde los clientes pueden explorar productos, armar su pedido y enviarlo directamente al vendedor por WhatsApp.
 
 El vendedor dispone de un **panel de administración privado** desde donde gestiona el catálogo completo de productos.
 
