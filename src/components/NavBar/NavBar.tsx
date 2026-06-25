@@ -29,7 +29,7 @@ export const NavBar = () => {
           to={"/"}
         >
           <p
-            className="font-dancing text-[38px] ">
+            className="font-dancing text-[30px] sm:text-[38px] ">
             Hornera de Barro
           </p>
         </Link>
