@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { AdminNavBar } from '../components/AdminNavBar/AdminNavBar';
+import { AdminNavBar } from '../components/AdminFiles/AdminNavBar';
 import { useEffect } from 'react';
 import { useAuthStore } from '../store/useAuthStore';
 
