@@ -73,10 +73,6 @@ export const AdminProductsScreen = () => {
                                             alt={product.name}
                                             className="w-16 h-16 object-cover rounded"
                                         />
-
-                                        <span className="text-sm text-gray-600">
-                                            {product.images.length} img
-                                        </span>
                                     </div>
                                 ) : (
                                     <span className="text-gray-500">

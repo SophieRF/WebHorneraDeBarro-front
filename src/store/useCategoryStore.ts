@@ -10,7 +10,6 @@ interface CategoryState {
     //removeFromCategory: (productId: string) => void
     //getTotalProducts: () => number
 }
-
 export const useCategoryStore = create<CategoryState>((set, get) => ({
     categories: [],
 
