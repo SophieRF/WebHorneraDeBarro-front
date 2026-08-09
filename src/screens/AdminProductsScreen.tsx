@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useProductStore } from "../store/useProductStore";
+import { EditProductModal } from "../components/Modals/EditProductModal";
 
 export const AdminProductsScreen = () => {
     const { fetchProducts, products } = useProductStore();
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         fetchProducts();
@@ -94,12 +96,12 @@ export const AdminProductsScreen = () => {
                             </td>
 
                             {/* Precio */}
-                            <td className="border border-gray-400 p-2">
+                            <td className="border border-gray-400 p-2 text-center">
                                 ${product.price}
                             </td>
 
                             {/* Categoría */}
-                            <td className="border border-gray-400 p-2">
+                            <td className="border border-gray-400 p-2 text-center">
                                 {product.category.name}
                             </td>
 
@@ -118,6 +120,7 @@ export const AdminProductsScreen = () => {
                                 <div className="flex gap-2 justify-center">
                                     <button
                                         className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                        onClick={() => setIsModalOpen(!isModalOpen)}
                                     >
                                         Editar
                                     </button>
@@ -144,7 +147,14 @@ export const AdminProductsScreen = () => {
                     )}
                 </tbody>
             </table>
+
+             {isModalOpen && (
+        <EditProductModal
+            onClose={() => setIsModalOpen(false)}
+        />
+    )}
         </div>
+
     );
 };
 

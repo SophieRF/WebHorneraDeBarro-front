@@ -53,7 +53,10 @@ export const LoginForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="mt-8 flex flex-col gap-6 lg:gap-6 w-96 ">
       <div>
-        <p>Email</p>
+        {/*Email */}
+        <p className="text-white">
+          Email
+        </p>
         <input
           {...register("email", {
             required: "Email requerido",
@@ -85,8 +88,11 @@ export const LoginForm = () => {
         )}
       </div>
 
+      {/*Password */}
       <div className="relative">
-        <p>Contraseña</p>
+        <p className="text-white">
+          Contraseña
+        </p>
         <input
           {...register("password", {
             required: "Contraseña requerida",
@@ -100,7 +106,7 @@ export const LoginForm = () => {
             },
           })}
           className={`mb-2 p-2 outline-2 rounded border focus:outline-primary w-full cursor-pointer ${errors.password
-            ? "border-red-500 outline-red-500 focus:outline-red-500"
+            ? "border-red-700 border- outline-red-500 focus:outline-red-500"
             : ""
             }`}
           autoComplete="current-password"
@@ -128,13 +134,13 @@ export const LoginForm = () => {
         </button>
 
         {errors.password && (
-          <p className="text-red-500 text-sm mt-2 ml-1">
+          <p className="text-red-400 text-sm mt-2 ml-1">
             {errors.password?.message}
           </p>
         )}
       </div>
       <button
-        className="btn bg-yellow-500 hover:bg-yellow-400 transition-all duration-300 w-2/3 h-12 mt-6 self-center rounded"
+        className="btn bg-white hover:bg-[#fffeac] transition-all duration-300 w-2/3 h-12 mt-6 self-center rounded"
         type="submit">
         Ingresar
       </button>
